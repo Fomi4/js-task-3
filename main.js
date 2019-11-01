@@ -3,13 +3,17 @@
 // For example, user enters 2 numbers - 25 and 5. And operation - 'division'. The result must be 5.
 // NOTE! Since prompt returns a string, you'll have to convert to a number. You should check parseInt() function.
 
-let num1 = prompt("Enter any first number", "");
-let num2 = prompt("Enter any second number", "");
-let operation = num1 / num2;
+let num1 = parseInt(prompt("Enter any first number:"));
+let num2 = parseInt(prompt("Enter any second number:"));
+let operation = prompt("Enter operation:");
 
-if (isNaN(operation)) {
-  alert("One of the values is letters!");
+if (operation == 'plus') {
+  console.log(num1 + num2);
+} else if (operation == 'minus') {
+  console.log(num1 - num2);
+} else if (operation == 'div') {
+  console.log(num1 / num2);
+} else {
+  console.log("Unknown operation");
 }
-
-console.log(parseInt(operation));
 
